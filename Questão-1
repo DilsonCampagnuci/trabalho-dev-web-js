@@ -1,0 +1,19 @@
+//Exercicio 1
+
+function contarOcorrencias(array) {
+  const contagem = {};
+
+  array.forEach(numero => {
+    if (contagem[numero]) {
+      contagem[numero]++;
+    } else {
+      contagem[numero] = 1;
+    }
+  });
+
+  return contagem;
+}
+
+const numeros = [1, 5, 3, 3, 2, 4, 5];
+const resultado = contarOcorrencias(numeros);
+console.log(resultado);

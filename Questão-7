@@ -1,0 +1,30 @@
+//Exercicio 7
+function multiplicarMatrizes(matrizA, matrizB) {
+  const linhasA = matrizA.length;
+  const colunasA = matrizA[0].length;
+  const linhasB = matrizB.length;
+  const colunasB = matrizB[0].length;
+
+  if (colunasA !== linhasB) {
+    return "Não da para fazer a multiplicação!";
+  }
+
+  const resultado = [];
+  for (let i = 0; i < linhasA; i++) {
+    resultado[i] = [];
+    for (let j = 0; j < colunasB; j++) {
+      let soma = 0;
+      for (let k = 0; k < colunasA; k++) {
+        soma += matrizA[i][k] * matrizB[k][j];
+      }
+      resultado[i][j] = soma;
+    }
+  }
+
+  return resultado;
+}
+const matrizA = [[4, 2, 5], [9, 5, 3]];
+const matrizB = [[8, 5], [9, 20], [12, 15]];
+
+const resultado = multiplicarMatrizes(matrizA, matrizB);
+console.log(resultado);

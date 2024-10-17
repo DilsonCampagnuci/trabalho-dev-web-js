@@ -1,0 +1,14 @@
+//Execicio 3
+function separarParesImpares(numeros) {
+  return numeros.reduce((acc, numero) => {
+    if (numero % 2 === 0) {
+      acc.pares.push(numero);
+    } else {
+      acc.impares.push(numero);
+    }
+    return acc;
+  }, { pares: [], impares: [] });
+}
+const numeros = [7, 6, 5, 9, 8, 2];
+const resultado = separarParesImpares(numeros);
+console.log(resultado);

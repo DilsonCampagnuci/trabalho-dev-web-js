@@ -1,0 +1,14 @@
+// Exercicio 2
+function ordenarPorIdade(pessoas) {
+  return pessoas.sort((pessoaA, pessoaB) => {
+    return pessoaA.idade - pessoaB.idade;
+  });
+}
+const pessoas = [
+  { nome: 'Dilson', idade: 67 },
+  { nome: 'Marlon', idade: 78 },
+  { nome: 'Anderson', idade: 44 },
+];
+
+const pessoasOrdenadas = ordenarPorIdade(pessoas);
+console.log(pessoasOrdenadas);

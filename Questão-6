@@ -1,0 +1,12 @@
+//Exercicio 6
+function substituirElemento(array, valorAntigo, novoValor) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === valorAntigo) {
+      array[i] = novoValor;
+    }
+  }
+  return array;
+}
+const numeros = [5, 9, 3, 7, 2, 1];
+const novoArray = substituirElemento(numeros, 7, 2);
+console.log(novoArray);

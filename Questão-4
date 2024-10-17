@@ -1,0 +1,11 @@
+//Execicio 4
+function ehPalindromo(palavra) {
+  const palavraLimpa = palavra.replace(/\s/g, '').toLowerCase();
+
+  const palavraInvertida = palavraLimpa.split('').reverse().join('');
+
+  return palavraLimpa === palavraInvertida;
+}
+const palavra = "O lobo ama o bolo";
+const resultado = ehPalindromo(palavra);
+console.log(resultado);
